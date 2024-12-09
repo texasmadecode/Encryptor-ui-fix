@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor Web UI</title>
+</head>
+<body>
+    <h1>Welcome to the Encryptor Web UI</h1>
+    <form action="/evaluate" method="post">
+        <h3>Evaluate Password Strength</h3>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Evaluate</button>
+    </form>
+    <form action="/encrypt" method="post">
+        <h3>Encrypt File</h3>
+        <button type="submit">Encrypt</button>
+    </form>
+    <form action="/decrypt" method="post">
+        <h3>Decrypt File</h3>
+        <input type="text" name="key" placeholder="Enter Secret Key" required>
+        <button type="submit">Decrypt</button>
+    </form>
+    <form action="/generate_key" method="post">
+        <h3>Generate RSA Key Pair</h3>
+        <button type="submit">Generate Key</button>
+    </form>
+    <div>
+        <h3>Result:</h3>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>
